@@ -20,6 +20,15 @@ export class ItemsComponent implements OnInit {
 
     switchLang(lang: string) {
         this.translate.use(lang);
-      }
+    }
+
+    useLanguage(language: string) {
+        this.translate.use(language);
+    }
+
+    add(lang: string) {
+
+        //this.translate.store
+    }
 
 }

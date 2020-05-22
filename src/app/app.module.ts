@@ -11,14 +11,9 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
 import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
-import { NativeScriptTranslateLoaderService } from "./native-script-translate-loader.service";
 import { HttpClient } from "@angular/common/http";
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { NativeScriptLoader } from '@danvick/ngx-translate-nativescript-loader';
-// AoT requires an exported function for factories
-// export function createTranslateLoader(http: HttpClient) {
-//     return new NativeScriptTranslateLoaderService(http);
-// }
 
 export function createTranslateLoader() {
     return new NativeScriptLoader("./assets/i18n/", ".json");

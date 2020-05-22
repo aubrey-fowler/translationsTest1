@@ -1,12 +1,21 @@
-
 <ActionBar title="{{ 'Sitetitle' | translate }}"></ActionBar>
 
-<GridLayout>
+<Stacklayout>
+
+    <Label text="{{ 'Sitetitle' | translate }}"></Label> <!-- pipe works -->
+    <!-- <Label [translate]="'Sitetitle'"></Label> --> <!-- doesn't work -->
+    <!-- <Label translate>'Sitetitle'</Label> --> <!-- doesn't work -->
 
 
-    <Label text="{{ 'Sitetitle' | translate }}"></Label>
+    <button text="en" (tap)="useLanguage('en')"></button>
+    <button text="nl" (tap)="useLanguage('nl')"></button>
+    <button text="fr" (tap)="useLanguage('fr')"></button>
 
+    <button text="add fr" (tap)="add('fr')"></button>
 
+</Stacklayout>
+
+<!-- <GridLayout>
     <ListView [items]="items">
         <ng-template let-item="item">
             <StackLayout>
@@ -14,4 +23,4 @@
             </StackLayout>
         </ng-template>
     </ListView>
-</GridLayout>
+</GridLayout> -->
