@@ -26,9 +26,9 @@ export class ItemsComponent implements OnInit {
         this.translate.use(language);
     }
 
-    add(lang: string) {
-
-        //this.translate.store
+    add() {
+        console.log(' a ');
+        this.translate.setTranslation("fr", { Sitetitle : "bonjour"}, true);
     }
 
 }
